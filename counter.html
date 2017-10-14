@@ -14,7 +14,7 @@
   <body>
       <div id="root"> </div>
       <script type="text/babel">
-      
+
         class Counter extends React.Component{
           
           constructor(props){
@@ -39,9 +39,14 @@
             this.setState( (prevState, props) => {
                   return {value: prevState.value+1}
                })
+            //this.state.count is originally 0
+            //this.setState({count:42}, () = {
+            //console.log(this.state.count)
+            //outputs 42
+            //})
           }
           render(){
-            return <div>Message: {this.state.value}</div>
+            return <div>Counter: {this.state.value}</div>
           }
         }
 
