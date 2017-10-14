@@ -14,9 +14,39 @@
   <body>
       <div id="root"> </div>
       <script type="text/babel">
+      
+        class Counter extends React.Component{
+          
+          constructor(props){
+            super(props)
+            //initial state set up
+            this.state = {value: 0}
+
+          }
+
+          componentDidMount(){
+            //updating state
+            this.setState( (prevState, props) => {
+                  return {value: prevState.value+1}
+               })
+                
+            this.setState( (prevState, props) => {
+                  return {value: prevState.value+1}
+               })
+            this.setState( (prevState, props) => {
+                  return {value: prevState.value+1}
+               })
+            this.setState( (prevState, props) => {
+                  return {value: prevState.value+1}
+               })
+          }
+          render(){
+            return <div>Message: {this.state.value}</div>
+          }
+        }
 
           ReactDOM.render(
-            <QuestionGame/>,
+            <Counter/>,
             document.getElementById('root')
           )
          
